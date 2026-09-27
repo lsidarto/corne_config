@@ -67,9 +67,9 @@
 
             display-name = "Base";
             bindings = <
-&kp W  &kp E  &kp R      &kp T       &kp Y        &kp U      &kp I                 &kp O        &kp P         &kp A
-&kp F  &kp G  &kp H      &kp J       &kp K        &kp L      &kp SQT               &kp Z        &kp X         &kp C
-&kp N  &kp X  &kp COMMA  &kp PERIOD  &kp SLASH    &kp LC(N)  &kp LG(LEFT_COMMAND)  &lt 2 SPACE  &lt 1 RETURN  &kp BACKSPACE
+&kp Q  &kp W  &kp E      &kp R      &kp T        &kp Y      &kp U                 &kp I        &kp O         &kp P
+&kp &bt BT_CLR  &kp S  &kp D      &kp F       &kp G        &kp H      &kp J               &kp K        &kp L         &kp &bt BT_CLR
+&kp Z  &kp X  &kp C  &kp V  &kp B    &kp N  &kp M  &lt 2 COMMA  &lt 1 PERIOD  &kp BACKSPACE
               &kp LGUI   &mo 1       &kp SPACE    &kp RET    &mo 2                 &kp RALT
             >;
         };
