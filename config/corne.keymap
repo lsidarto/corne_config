@@ -10,13 +10,6 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    chosen {
-        zmk,physical-layout = &foostan_corne_5col_layout;
-        /*zmk,matrix-transform = &five_column_transform;*/
-    };
-};
-
-/ {
     combos {
         compatible = "zmk,combos";
 
