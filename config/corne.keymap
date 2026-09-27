@@ -10,7 +10,20 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    chosen { zmk,matrix-transform = &five_column_transform; };
+    chosen {
+        zmk,physical-layout = &physical_layout0;
+    };
+
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "5x3+3 keyboard";
+        
+        // References your shield's keyboard scan driver
+        kscan = <&kscan0>;
+        
+        // References your matrix transform (Commonly &default_transform)
+        transform = <&five_column_transform>;
+    };
 };
 
 / {
