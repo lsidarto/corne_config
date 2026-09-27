@@ -13,54 +13,39 @@
     combos {
         compatible = "zmk,combos";
 
-        excl {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <0 10>;
-        };
-
-        at {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <1 11>;
-        };
-
-        hash {
-            bindings = <&kp HASH>;
-            key-positions = <2 12>;
-        };
-
         dollar {
             bindings = <&kp DOLLAR>;
-            key-positions = <3 13>;
+            key-positions = <2 10>;
         };
 
         perc {
             bindings = <&kp PERCENT>;
-            key-positions = <4 14>;
+            key-positions = <3 11>;
         };
 
         carat {
             bindings = <&kp CARET>;
-            key-positions = <5 15>;
+            key-positions = <4 12>;
         };
 
         amp {
             bindings = <&kp AMPERSAND>;
-            key-positions = <16 6>;
+            key-positions = <13 5>;
         };
 
         ast {
             bindings = <&kp ASTERISK>;
-            key-positions = <7 17>;
+            key-positions = <6 14>;
         };
 
         paren_op {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <8 18>;
+            key-positions = <7 15>;
         };
 
         paren_cl {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <9 19>;
+            key-positions = <8 16>;
         };
     };
 
@@ -69,48 +54,36 @@
 
         default_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+            // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |
+            // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |
+            // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |
+            //             | GUI | LWR | SPC |   | ENT | RSE | ALT |
 
             display-name = "Base";
             bindings = <
-&kp Q  &kp W  &kp E  &kp R      &kp T       &kp Y        &kp U      &kp I         &kp O        &kp P         &kp A          &kp S
-&kp D  &kp F  &kp G  &kp H      &kp J       &kp K        &kp L      &kp SQT       &kp Z        &kp X         &kp C          &kp V
-&kp B  &kp N  &kp X  &kp COMMA  &kp PERIOD  &kp SLASH    &kp LC(N)  &kp LG(LGUI)  &lt 2 SPACE  &lt 1 RETURN  &kp BACKSPACE  &kp LEFT_SHIFT
-                     &kp LGUI   &mo 1       &kp SPACE    &kp RET    &mo 2         &kp RALT
+&kp W  &kp E  &kp R      &kp T       &kp Y        &kp U      &kp I         &kp O        &kp P         &kp A
+&kp F  &kp G  &kp H      &kp J       &kp K        &kp L      &kp SQT       &kp Z        &kp X         &kp C
+&kp N  &kp X  &kp COMMA  &kp PERIOD  &kp SLASH    &kp LC(N)  &kp LG(LGUI)  &lt 2 SPACE  &lt 1 RETURN  &kp BACKSPACE
+              &kp LGUI   &mo 1       &kp SPACE    &kp RET    &mo 2         &kp RALT
             >;
         };
 
         lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             display-name = "Lower";
             bindings = <
-&kp MINUS  &kp N1         &kp N2            &kp N3            &kp PLUS              &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp UNDER   &kp EQUAL  &kp DOUBLE_QUOTES  &kp KP_DIVIDE  &kp N4
-&kp N5     &kp N6         &kp KP_MULTIPLY   &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp PIPE          &kp SEMICOLON    &kp COLON   &kp N0     &kp N7             &kp N8         &kp N9
-&kp ENTER  &kp LESS_THAN  &kp GREATER_THAN  &kp SLASH         &kp NON_US_BACKSLASH  &kp QUESTION      &bt BT_CLR       &kp K_BACK  &trans     &trans             &bt BT_PRV     &bt BT_NXT
-                                            &kp LGUI          &trans                &kp SPACE         &kp RET          &trans      &kp RALT
+&kp N1     &kp N2            &kp N3            &kp PLUS              &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp UNDER   &kp EQUAL  &kp DOUBLE_QUOTES  &kp KP_DIVIDE
+&kp N6     &kp KP_MULTIPLY   &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp PIPE          &kp SEMICOLON    &kp COLON   &kp N0     &kp N7             &kp N8
+&kp LESS_THAN  &kp GREATER_THAN  &kp SLASH     &kp NON_US_BACKSLASH  &kp QUESTION      &bt BT_CLR       &kp K_BACK  &trans     &trans             &bt BT_PRV
+                                 &kp LGUI          &trans                &kp SPACE         &kp RET          &trans      &kp RALT
             >;
         };
 
         raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             display-name = "Raise";
             bindings = <
-&kp F1             &kp F2                &kp F3      &kp F4            &kp C_VOLUME_UP  &kp C_BRIGHTNESS_INC    &kp K_PASTE  &kp UP_ARROW   &kp K_CUT  &kp CAPSLOCK  &kp F5                  &kp F6
-&kp F7             &kp F8                &kp K_MUTE  &kp C_PLAY_PAUSE  &kp LEFT         &kp DOWN                &kp RIGHT    &kp DELETE     &kp F9     &kp F10       &kp F11                 &studio_unlock
-&kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &kp K_UNDO  &kp K_REDO        &kp K_COPY       &kp TAB                 &kp PG_UP    &kp PAGE_DOWN  &trans     &trans        &kp C_BACKLIGHT_TOGGLE  &rgb_ug RGB_TOG
+&kp F2             &kp F3                &kp F4      &kp C_VOLUME_UP   &kp C_BRIGHTNESS_INC    &kp K_PASTE  &kp UP_ARROW   &kp K_CUT  &kp CAPSLOCK  &kp F5
+&kp F8             &kp K_MUTE            &kp C_PLAY_PAUSE  &kp LEFT    &kp DOWN                &kp RIGHT    &kp DELETE     &kp F9     &kp F10       &kp F11
+&kp C_BRIGHTNESS_DEC  &kp K_UNDO         &kp K_REDO        &kp K_COPY  &kp TAB                 &kp PG_UP    &kp PAGE_DOWN  &trans     &trans        &kp C_BACKLIGHT_TOGGLE
                                                      &kp LGUI          &trans           &kp SPACE               &kp RET      &trans         &kp RALT
             >;
         };
