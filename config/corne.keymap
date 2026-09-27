@@ -11,12 +11,17 @@
 
 / {
     chosen {
+        // 1. Keeps the Nick Coustos editor happy and showing 5 columns
+        zmk,matrix-transform = &five_column_transform;
+
+        // 2. Keeps ZMK Studio happy by pointing to a valid physical layout
         zmk,physical-layout = &physical_layout0;
     };
 
+    // 3. Formally link the two together so ZMK Studio can compile
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
-        display-name = "Default 36-Key Layout";
+        display-name = "5-Column Layout";
         transform = <&five_column_transform>;
         kscan = <&kscan0>;
     };
