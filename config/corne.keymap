@@ -10,18 +10,18 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    chosen {
-        zmk,physical-layout = &physical_layout0;
-    };
+    chosen { zmk,physical-layout = &physical_layout0; };
 
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "5x3+3 keyboard";
-        
+
         // References your shield's keyboard scan driver
+
         kscan = <&kscan0>;
-        
+
         // References your matrix transform (Commonly &default_transform)
+
         transform = <&five_column_transform>;
     };
 };
@@ -93,10 +93,10 @@
 
             display-name = "Base";
             bindings = <
-&kp Q  &kp W  &kp E  &kp R      &kp T       &kp Y        &kp U      &kp I                 &kp O        &kp P         &kp A          &kp S
-&kp D  &kp F  &kp G  &kp H      &kp J       &kp K        &kp L      &kp SQT               &kp Z        &kp X         &kp C          &kp V
-&kp B  &kp N  &kp X  &kp COMMA  &kp PERIOD  &kp SLASH    &kp LC(N)  &kp LG(LEFT_COMMAND)  &lt 2 SPACE  &lt 1 RETURN  &kp BACKSPACE  &kp LEFT_SHIFT
-                     &kp LGUI   &mo 1       &kp SPACE    &kp RET    &mo 2                 &kp RALT
+&kp Q  &kp W  &kp E  &kp R      &kp T       &kp Y        &kp U      &kp I         &kp O        &kp P         &kp A          &kp S
+&kp D  &kp F  &kp G  &kp H      &kp J       &kp K        &kp L      &kp SQT       &kp Z        &kp X         &kp C          &kp V
+&kp B  &kp N  &kp X  &kp COMMA  &kp PERIOD  &kp SLASH    &kp LC(N)  &kp LG(LGUI)  &lt 2 SPACE  &lt 1 RETURN  &kp BACKSPACE  &kp LEFT_SHIFT
+                     &kp LGUI   &mo 1       &kp SPACE    &kp RET    &mo 2         &kp RALT
             >;
         };
 
