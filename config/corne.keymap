@@ -11,22 +11,7 @@
 
 / {
     chosen {
-        // 1. The Keymap Editor reads this text linearly and displays 5 columns
         zmk,matrix-transform = &five_column_transform;
-
-        // 2. This satisfies the ZMK Studio compiler requirement
-        zmk,physical-layout = &physical_layout0;
-    };
-
-    // 3. This immediately deletes the property so ZMK Studio doesn't crash during build
-    /delete-property/ zmk,matrix-transform;
-
-    // 4. Properly map the physical layout so ZMK Studio compiles cleanly
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "Default 5-Column Layout";
-        transform = <&five_column_transform>;
-        kscan = <&kscan0>;
     };
 };
 
