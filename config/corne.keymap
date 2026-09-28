@@ -16,8 +16,8 @@
 #define FUNC    3
 
 // MACROS
-#define SUPER LC(LSHIFT)
-#define SUPER2 LA(LC(LSHIFT))
+// #define SUPER LC(LSHIFT)
+// #define SUPER2 LA(LC(LSHIFT))
 
 // Opposite-hand key positions, used to restrict homerow mod holds to
 // cross-hand chords so same-hand rolls resolve as taps.
@@ -89,6 +89,16 @@
     };
   };
 
+  //macros {
+  //      vim_quit: vim_quit {
+  //          label = "ZM_vim_quit";
+  //          compatible = "zmk,behavior-macro";
+  //          #binding-cells = <0>;
+  //          bindings
+  //              = <&macro_tap &kp ESC &kp COLON &kp W &kp Q>;
+  //      };
+  //  };
+
   keymap {
     compatible = "zmk,keymap";
 
@@ -107,8 +117,8 @@
       bindings = <
 
 &none   /**/  &none         &kp LA(LEFT)  &kp UP        &kp LA(RIGHT) &kp PG_UP  /**/  &kp PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  /**/  &none
-&none   /**/  &kp SUPER     &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN  /**/  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH        /**/  &none
-&none   /**/  &kp SUPER2    &none         &none         &kp HOME      &kp END    /**/  &kp N0     &kp N1  &kp N2  &kp N3  &kp DOT          /**/  &none
+&none   /**/  &none         &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN  /**/  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp SLASH        /**/  &none
+&none   /**/  &none         &none         &none         &kp HOME      &kp END    /**/  &kp N0     &kp N1  &kp N2  &kp N3  &kp DOT          /**/  &none
               &trans  &trans  &trans  /**/  &trans  &mo FUNC  &trans
 
       >;
