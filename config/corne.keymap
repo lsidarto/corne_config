@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    chosen { zmk,physical-layout = &corne_5col_layout; };
+    chosen { zmk,matrix-transform = &five_column_transform; };
 };
 
 / {
